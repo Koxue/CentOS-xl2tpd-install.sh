@@ -23,7 +23,7 @@ IP=`ifconfig eth0 | grep "inet addr" | cut -f 2 -d ":" | cut -f 1 -d " "`
 
 yum install -y ppp bison gmp-devel flex gcc make libpcap-devel perl openswan
 
-makedir /etc/xl2tpd
+mkdir /etc/xl2tpd
 cd /etc/xl2tpd
 wget  https://download.openswan.org/xl2tpd/xl2tpd-1.3.1.tar.gz --no-check-certificate
 tar -zxvf xl2tpd-1.3.1.tar.gz
