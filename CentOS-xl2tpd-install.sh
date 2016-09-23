@@ -19,7 +19,7 @@ echo "You need to have CentOS system!"
 exit 0
 fi
 
-IP=`ifconfig eth0 | grep "inet addr" | cut -f 2 -d ":" | cut -f 1 -d " "`
+IP=`curl -s ipv4.icanhazip.com`
 
 yum install -y ppp bison gmp-devel flex gcc make libpcap-devel perl openswan
 
